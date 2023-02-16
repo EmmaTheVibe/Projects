@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="reg page style.css">
+   </head>
+   <body>
+    <h1>Login</h1>
+    <p>Please enter your details</p>
+    <form action="success page.html">
+        <fieldset>
+            <label for="email">Enter Your Email: <input id="email" type="email" name="email" required></label>
+            <label for="password">Password: <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name="password" required></label>
+        </fieldset>
+        <p>
+            <a href="success page.html"><input type="submit" value="Login"></a>
+        </p>
+    </form>
+   </body>
+</html>
