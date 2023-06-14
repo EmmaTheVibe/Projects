@@ -147,7 +147,6 @@ body{
     align-items: center;
     background-image: url(./images/featuresbkg.svg);
     background-size: cover;
-    background-position: center;
 }
 .ft-box{
     width: 95%;
