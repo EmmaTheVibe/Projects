@@ -187,7 +187,6 @@ body{
 .btn:hover{
     background-color: #F9956B;
     color: #FFFFFF;
-    transition: .3s;
 }
 .clicked{
     background-color: #F9956B;
