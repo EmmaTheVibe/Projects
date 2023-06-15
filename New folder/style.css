@@ -712,11 +712,11 @@ input{
     margin-bottom: 1rem;
 }
 .logo2{
-    height: 1.875rem;
-    display: none;
+    height: 1.2rem;
+    margin-bottom: 4px;
 }
 .contact{
-    width: 13.5rem;
+    width: 12rem;
     height: 1.875rem;
     display: flex;
     flex-direction: row;
@@ -742,7 +742,7 @@ input{
     font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     line-height: 0.563rem;
     color: #FFFFFF;
 }
@@ -757,7 +757,7 @@ input{
     font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 1rem;
     color: #FFFFFF;
     text-decoration: underline;
