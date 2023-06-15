@@ -17,19 +17,11 @@ body{
 
 .navbar{
     height: 60px;
-    padding-left: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .navbar.scrolled {
     background:#121212;
-}
-.nav-items{
-    width: 17rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 .logo{
     height: 1.875rem;
@@ -51,7 +43,7 @@ body{
 
 .hero{
     width: 100%;
-    padding-top: 12rem;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +63,7 @@ body{
     inset: 0;
     z-index: -1;
     background: #121212;
-    opacity: .5;
+    opacity: .9;
 }
 .init-txt{
     height: 13rem;
@@ -107,7 +99,6 @@ body{
 .sample{
     height: 15rem;
     width: 100%;
-    margin-top: 3rem;
     padding-left: 1.5rem;
     display: flex;
     align-items: end;
@@ -147,14 +138,15 @@ body{
     align-items: center;
     background-image: url(./images/featuresbkg.svg);
     background-size: cover;
+    /* background-position: center; */
 }
 .ft-box{
     width: 95%;
     padding-top: 3%;
     padding-right: 5px;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
 }
 .content{
     height: 12rem;
@@ -285,22 +277,9 @@ body{
 }
 .iphone{
     width: 10rem;
-    z-index: 0;
     transition: ease-in-out .4s;
-}
-.state{
-    position: absolute;
-    z-index: 1;
-    width: 8.75rem;
-    transition: ease-in-out .4s;
-    border-radius: 0.625rem;
 }
 .show-ft .iphone{
-    transform: scale(1.2, 1.2);
-    box-shadow: 0rem 1rem 1rem 0.1rem rgba(0, 0, 0, 0.22);
-    border-radius: 25px;
-}
-.show-ft .state{
     transform: scale(1.2, 1.2);
 }
 
@@ -392,13 +371,13 @@ body{
     isolation: isolate;
     transition: 1.5s;
 }
-.bvnbox:hover{
+.show-dt .bvnbox{
     box-shadow: 0rem 2.5rem 2.5rem 0.313rem rgba(0, 0, 0, 0.19);
 }
-.otpbox:hover{
+.show-dt .otpbox{
     box-shadow: 0rem 2.5rem 2.5rem 0.313rem rgba(0, 0, 0, 0.19);
 }
-.pinbox:hover{
+.show-dt .pinbox{
     box-shadow: 0rem 2.5rem 2.5rem 0.313rem rgba(0, 0, 0, 0.19);
 }
 .bvnbox::after{
@@ -407,7 +386,7 @@ body{
     inset: 0;
     z-index: -1;
     background: #F9956B;
-    opacity: 0;
+    opacity: .8;
     border-radius: 1rem;
 }
 .otpbox::after{
@@ -416,7 +395,7 @@ body{
     inset: 0;
     z-index: -1;
     background: #F9956B;
-    opacity: 0;
+    opacity: .8;
     border-radius: 1rem;
 }
 .pinbox::after{
@@ -425,7 +404,7 @@ body{
     inset: 0;
     z-index: -1;
     background: #F9956B;
-    opacity: 0;
+    opacity: .8;
     border-radius: 1rem;
 }
 .bvn, .otp, .pin{
@@ -440,13 +419,13 @@ body{
     align-self: center;
     justify-self: end;
 }
-.bvnbox:hover .bvn{
+.show-dt .bvn{
     transform: translateY(-7.5rem);
 }
-.otpbox:hover .otp{
+.show-dt .otp{
     transform: translateY(7.5rem);
 }
-.pinbox:hover .pin{
+.show-dt .pin{
     transform: translateY(-7.5rem);
 }
 .bvn-txt, .pin-txt{
@@ -466,13 +445,13 @@ body{
     padding: 0;
     transition: cubic-bezier(.03,1.11,.96,1.02) 1.5s;
 }
-.bvnbox:hover .bvn-txt{
+.show-dt .bvn-txt{
     transform: translateY(-7rem);
 }
-.otpbox:hover .otp-txt{
+.show-dt .otp-txt{
     transform: translateY(7.5rem);
 }
-.pinbox:hover .pin-txt{
+.show-dt .pin-txt{
     transform: translateY(-7rem);
 }
 .hd{
@@ -494,14 +473,19 @@ body{
     color: #FFFFFF;
 }
 .companies{
-    width: 17rem;
+    width: 14rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+.comp{
+    display: flex;
     justify-content: space-between;
-    align-items: start;
+}
+.companies :nth-of-type(1){
+    margin-bottom: 5px;
 }
 .companies img{
-    max-width: 15%;
+    width: 40%;
 }
 
 
@@ -783,9 +767,13 @@ input{
 
 
 @media screen and (min-width:650px){
-    .nav-items{
-        width: 40rem;
+    .logo{
+        margin-left: 3rem;
     }
+    .download{
+        margin-right: 3rem;
+    }
+
     .iphone-top{
         width: 18rem;
         height: 18rem;
@@ -816,6 +804,8 @@ input{
     }
     .companies{
         width: 40rem;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
 
@@ -867,6 +857,13 @@ input{
 
 
 @media screen and (min-width:950px){
+    .logo{
+        margin-left: 15rem;
+    }
+    .download{
+        margin-right: 15rem;
+    }
+
     .hero{
         padding-top: 10em;
     }
@@ -901,29 +898,6 @@ input{
     }
 
 
-    .features{
-        flex-direction: row;
-        padding: 8em;
-    }
-    .ft-box{
-        width: 30rem;
-        margin-right: 3rem;
-    }
-    .guide{
-        flex-direction: row;
-    }
-    .bvnbox, .otpbox, .pinbox{
-        margin-right: 1rem;
-        width: 13.125rem;
-        height: 18.75rem;
-    }
-    .bvn-txt, .pin-txt{
-        margin-top: 0.375rem;
-    }
-    .otp-txt{
-        display: flex;
-        margin-bottom: 0.375rem;
-    }
     .hd{
         font-size: 0.8rem;
         line-height: 0.313rem;
@@ -934,17 +908,14 @@ input{
         line-height: 1.6;
         margin-left: 1.2rem;
     }
-    .bvnbox:hover .bvn-txt{
+    .show-dt .bvn-txt{
         transform: translateY(-7rem);
     }
-    .otpbox:hover .otp-txt{
-        transform: translateY(7.2rem);
+    .show-dt .otp-txt{
+        transform: translateY(7.5rem);
     }
-    .pinbox:hover .pin-txt{
+    .show-dt .pin-txt{
         transform: translateY(-7rem);
-    }
-    .companies{
-        width: 44rem;
     }
     .more-details{
         padding-top: 7rem;
@@ -954,5 +925,14 @@ input{
     .download-box h3{
         font-size: 1.5rem;
         line-height: 1.8rem;
+    }
+}
+
+@media screen and(min-width: 1920px){
+    .logo{
+        margin-left: 22rem;
+    }
+    .download{
+        margin-right: 22rem;
     }
 }
