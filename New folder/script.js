@@ -1,9 +1,9 @@
-$(function () {
-    $(document).scroll(function () {
-        const $nav = $("#mainNavbar");
-        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-    });
-});
+// $(function () {
+//     $(document).scroll(function () {
+//         const $nav = $("#mainNavbar");
+//         $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+//     });
+// });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

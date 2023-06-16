@@ -19,10 +19,11 @@ body{
     height: 60px;
     display: flex;
     justify-content: space-between;
-}
-.navbar.scrolled {
     background:#121212;
 }
+/* .navbar.scrolled {
+    background:#121212;
+} */
 .logo{
     height: 1.875rem;
 }
